@@ -16,7 +16,44 @@ class Home extends StatelessWidget{
       ),
       body:Center(
         //Network Image
-        child: Image.asset('assets/demo.png'),
+
+        //Icon
+        child: IconButton(
+          onPressed: (){},
+          icon: Icon(Icons.alternate_email),
+          color: Colors.amber
+        ),
+
+        //Icon Button
+        /*child: RaisedButton.icon(
+          onPressed: (){
+          },
+          icon: Icon(
+            Icons.mail
+          ),
+          label: Text('mail me'),
+          color: Colors.amber,
+
+        ),*/
+
+       /*
+       //Button with text
+       child: FlatButton(
+          onPressed: (){
+            print('you clicked me');
+          },
+          child: Text('Click me'),
+          color: Colors.lightBlue,
+        ),
+*/
+
+      /*  //Icons
+        child: Icon(
+          Icons.airport_shuttle,
+          color: Colors.lightBlue,
+          size: 50.0,
+        ),*/
+       // child: Image.asset('assets/demo.png'),
 
        /* child: Image(
           image: AssetImage('assets/demo.png'),
