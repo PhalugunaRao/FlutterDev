@@ -14,53 +14,12 @@ class Home extends StatelessWidget{
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body:Center(
-        //Network Image
-
-        //Icon
-        child: IconButton(
-          onPressed: (){},
-          icon: Icon(Icons.alternate_email),
-          color: Colors.amber
-        ),
-
-        //Icon Button
-        /*child: RaisedButton.icon(
-          onPressed: (){
-          },
-          icon: Icon(
-            Icons.mail
-          ),
-          label: Text('mail me'),
-          color: Colors.amber,
-
-        ),*/
-
-       /*
-       //Button with text
-       child: FlatButton(
-          onPressed: (){
-            print('you clicked me');
-          },
-          child: Text('Click me'),
-          color: Colors.lightBlue,
-        ),
-*/
-
-      /*  //Icons
-        child: Icon(
-          Icons.airport_shuttle,
-          color: Colors.lightBlue,
-          size: 50.0,
-        ),*/
-       // child: Image.asset('assets/demo.png'),
-
-       /* child: Image(
-          image: AssetImage('assets/demo.png'),
-           //Image.network(src)
-          //image: NetworkImage('https://thumbs.dreamstime.com/z/nature-forest-trees-growing-to-upward-to-sun-wallpaper-42907586.jpg'),
-
-        ),*/
+      body:Container(
+        padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
+        //padding: EdgeInsets.all(30.0),
+        margin: EdgeInsets.all(30.0),
+        color: Colors.grey[400],
+        child: Text('hello') ,
       ),
 
       floatingActionButton: FloatingActionButton(
