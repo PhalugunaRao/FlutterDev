@@ -22,21 +22,40 @@ class Home extends StatelessWidget{
         child: Text('hello') ,
       ),*/
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          Text('hello world'),
-          FlatButton(
-              onPressed: (){},
-              child: Text('Click Me'),
-              color: Colors.amber,
+      body:Row(
+        children: [
+          Expanded(
+            flex: 2,
+              child: Image.asset('assets/demo.png')),
+          Expanded(
+            flex: 2,
+            child:Container(
+
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child: Text('1'),
+
+              ),
           ),
-          Container(
-            color: Colors.green,
-            padding: EdgeInsets.all(30.0),
-            child: Text('inside container'),
-          ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.pink,
+                  child: Text('2'),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.yellow,
+                child: Text('3'),
+              ),
+              ),
+
+
+
         ],
       ),
 
