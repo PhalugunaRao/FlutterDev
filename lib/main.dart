@@ -1,10 +1,46 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home:NinjaCard(),
+  home: QuoteList(),
 
 ));
 
+class QuoteList extends StatefulWidget {
+
+  @override
+  _QuoteListState createState() => _QuoteListState();
+}
+
+class _QuoteListState extends State<QuoteList> {
+
+  List<String> quotes =[
+    'Geethika is Number one student',
+    'Geethika is best daughter',
+    'Geethika is my daughter'
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text('Awesome Quotes'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+      body: Column(
+        children: quotes.map((e) => Text(e)).toList(),
+       /* children: quotes.map((e){
+          return Text(e);
+        }).toList(),*/
+      ),
+    );
+  }
+}
+
+
+
+
+/*
 class NinjaCard extends StatefulWidget {
   @override
   _NinjaCardState createState() => _NinjaCardState();
@@ -106,6 +142,7 @@ class _NinjaCardState extends State<NinjaCard> {
     );
   }
 }
+*/
 
 
 
