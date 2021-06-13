@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../model/movie.dart';
 
-class HorizontalListItem extends StatelessWidget {
+class TopRatedListItem extends StatelessWidget {
   final int index;
-  HorizontalListItem(this.index);
+  TopRatedListItem(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,13 @@ class HorizontalListItem extends StatelessWidget {
           Card(
             elevation: 10,
             child: Container(
-                height: _screenSize.height * 0.2,
+              height: _screenSize.height * 0.2,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                        movieList[index].imageUrl
+                        topRatedMovieList[index].imageUrl
                     )
                 ),
               ),
@@ -30,7 +30,7 @@ class HorizontalListItem extends StatelessWidget {
           ),
           SizedBox(height: 10,),
           Text(
-            movieList[index].title,
+            topRatedMovieList[index].title,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16

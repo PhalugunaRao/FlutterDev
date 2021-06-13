@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_secon/widget/vertical_list.dart';
+import 'package:flutter_secon/widget/toprated_list.dart';
+import '../widget/vertical_list.dart';
 import '../widget/horizontal_list.dart';
+import '../model/movie.dart';
 
 class DashboardScreen extends StatelessWidget {
 
@@ -40,8 +42,13 @@ class DashboardScreen extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.all(10),
-              height: 280,
-              child: ListView(
+              height: 270,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: movieList.length,
+                itemBuilder: (context,i) => HorizontalListItem(i),
+              ),
+             /* child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                  HorizontalList(),
@@ -52,7 +59,7 @@ class DashboardScreen extends StatelessWidget {
 
 
                 ],
-              ),
+              ),*/
             ),
             SizedBox(height: 30,),
             Padding(
@@ -74,18 +81,20 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
             Container(
-              height: 800,
+              height: 500,
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: ListView(
+              child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
-                children: <Widget>[
+                itemCount: bestMovieList.length,
+                itemBuilder: (context,i) => VerticalListItem(i),
+               /* children: <Widget>[
                   VerticalListItem(),
                   VerticalListItem(),
                   VerticalListItem(),
                   VerticalListItem(),
                   VerticalListItem(),
                   VerticalListItem(),
-                ],
+                ],*/
               ),
             ),
             SizedBox(height: 10,),
@@ -110,17 +119,17 @@ class DashboardScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(10),
               height: 280,
-              child: ListView(
+              child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  HorizontalList(),
-                  HorizontalList(),
-                  HorizontalList(),
-                  HorizontalList(),
-                  HorizontalList(),
-
-
-                ],
+               itemCount: topRatedMovieList.length,
+               itemBuilder: (context,i) => TopRatedListItem(i),
+               /* children: <Widget>[
+                  HorizontalListItem(),
+                  HorizontalListItem(),
+                  HorizontalListItem(),
+                  HorizontalListItem(),
+                  HorizontalListItem(),
+                ],*/
               ),
             ),
           ],

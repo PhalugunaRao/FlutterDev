@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secon/model/movie.dart';
 
 class VerticalListItem extends StatelessWidget {
+  final int index;
+  VerticalListItem(this.index);
   @override
   Widget build(BuildContext context) {
     return  Column(
@@ -19,7 +22,9 @@ class VerticalListItem extends StatelessWidget {
                   ),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage('https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05.jpg'),
+                    image: NetworkImage(
+                        bestMovieList[index].imageUrl
+                        ),
                   ),
                 ),
               ),
@@ -30,7 +35,7 @@ class VerticalListItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'The Avengers',
+                      bestMovieList[index].title,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold
